@@ -4,7 +4,14 @@
     "authors": [
         {
             "name": "Bernard Kllogjri",
-            "email": "bernard@kllogjri.com"
+            "email": "bernard@kllogjri.com",
+            "homepage": "http://www.kllogjri.com"
         }
-    ]
+    ],
+
+    "autoload": {
+        "classmap": [
+            "./src"
+        ]
+    }
 }
