@@ -1,9 +1,6 @@
 {
     "name": "bernardkllogjri/framesource",
     "description": "Source code for frameLab",
-    "require": {
-        "vlucas/phpdotenv": "^2.5"
-    },
     "authors": [
         {
             "name": "Bernard Kllogjri",
