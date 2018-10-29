@@ -1,18 +1,32 @@
 <?php
 
 namespace FrameLab;
-
 use Dotenv\Dotenv;
+
+define('__PROJECT_DIR__',
+    dirname(
+        dirname(dirname(dirname(dirname(__FILE__))))
+    )
+);
+error_reporting(env('ERR_REPORTING'));
+
+/**
+ * Class Bootstrap
+ * @package FrameLab
+ */
+
 
 class Bootstrap{
 
+    /**
+     * @return Bootstrap
+     */
     public static function wrap(){
 
         $requirables = [
-            'helpers.php',
+            dirname(__FILE__).'/helpers.php',
             __PROJECT_DIR__.'/config/site.php',
             __PROJECT_DIR__.'/routes/web.php',
-            __PROJECT_DIR__.'/vendor/autoload.php'
         ];
 
         foreach($requirables as $requirable){
@@ -24,11 +38,14 @@ class Bootstrap{
         }
 
         (new Dotenv(__PROJECT_DIR__))->load();
-        error_reporting(env('ERR_REPORTING'));
 
         return new self;
     }
 
+    /**
+     * Registers defined routes and bootstraps app
+     * @return mixed
+     */
     public function registerRoutes(){
         return Router::handleTraffic();
     }

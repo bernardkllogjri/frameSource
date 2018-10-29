@@ -1,25 +1,19 @@
 <?php
 
-define('__PROJECT_DIR__',
-    dirname(
-        dirname(dirname(dirname(dirname(__FILE__))))
-    )
-);
-
 function env($key){
 
     if($key == 'ERR_REPORTING'){
-        switch ($_ENV[$key]){
+        switch (getenv($key)){
             case 1:
                 return 32759;
                 break;
             default:
-                return $_ENV[$key];
+                return getenv($key);
                 break;
         }
     }
 
-    return $_ENV[$key];
+    return getenv($key);
 }
 
 function formated_view_string($string, array $data = []){
