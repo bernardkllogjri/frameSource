@@ -8,7 +8,7 @@ define('__PROJECT_DIR__',
         dirname(dirname(dirname(dirname(__FILE__))))
     )
 );
-error_reporting(env('ERR_REPORTING'));
+error_reporting(getenv('ERR_REPORTING'));
 
 /**
  * Class Bootstrap
