@@ -1,0 +1,17 @@
+{
+    "name": "bernardkllogjri/framesource",
+    "description": "Source code for frameLab",
+    "authors": [
+        {
+            "name": "Bernard Kllogjri",
+            "email": "bernard@kllogjri.com",
+            "homepage": "http://www.kllogjri.com"
+        }
+    ],
+
+    "autoload": {
+        "classmap": [
+            "./src"
+        ]
+    }
+}
