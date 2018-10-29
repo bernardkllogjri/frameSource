@@ -15,7 +15,6 @@ error_reporting(env('ERR_REPORTING'));
  * @package FrameLab
  */
 
-
 class Bootstrap{
 
     /**
