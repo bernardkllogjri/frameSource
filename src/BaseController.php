@@ -1,8 +1,8 @@
 <?php
 
-namespace FrameLab;
+namespace eDiet;
 
-use FrameLab\Traits\{Connection, Session};
+use eDiet\Traits\{Connection, Session};
 
 class BaseController{
     public $login_url = 'admin';

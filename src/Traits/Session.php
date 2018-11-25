@@ -1,8 +1,8 @@
 <?php
-namespace FrameLab\Traits;
+namespace eDiet\Traits;
 
-use DB;
-use Validation\Validation;
+use \eDiet\DB;
+use eDiet\Validation;
 
 trait Session{
 

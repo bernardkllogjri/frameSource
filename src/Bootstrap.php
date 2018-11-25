@@ -1,18 +1,18 @@
 <?php
 
-namespace FrameLab;
+namespace eDiet;
 use Dotenv\Dotenv;
 
 define('__PROJECT_DIR__',
     dirname(
-        dirname(dirname(dirname(dirname(__FILE__))))
+        dirname((__FILE__))
     )
 );
-error_reporting(env('ERR_REPORTING'));
+error_reporting(getenv('ERR_REPORTING'));
 
 /**
  * Class Bootstrap
- * @package FrameLab
+ * @package eDiet
  */
 
 class Bootstrap{

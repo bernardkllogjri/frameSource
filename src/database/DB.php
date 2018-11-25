@@ -1,6 +1,6 @@
 <?php
 
-namespace FrameLab;
+namespace eDiet;
 
 class DB{
     private static $connection = null;
@@ -15,10 +15,11 @@ class DB{
             $prepared_statement = static::$connection->prepare($statement);
             $prepared_statement->execute($data);
             $result = $prepared_statement->fetch(static::FETCH_TYPE);
-        }catch (Exception $e){
+        }catch (\Exception $e){
             die($e->getMessage());
         }
         if($result) return $result;
         return [];
     }
+
 }

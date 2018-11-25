@@ -1,5 +1,5 @@
 <?php
-    namespace FrameLab;
+    namespace eDiet;
 
     class Validation{
         static protected $failed = false;

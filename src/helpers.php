@@ -28,13 +28,15 @@ function view($view, $data = []){
     return require formated_view_string($view);
 }
 
-function config($key){
-    $configs = require '../config/site.php';
-    return $configs[$key];
-}
 
 function dd(...$args){
     die(var_dump($args));
+}
+
+function config($key){
+    $configTree = explode('.',$key);
+    $configs = require "../config/{$configTree[0]}.php";
+    return $configs[$configTree[1]];
 }
 
 function partials($partial){
